@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Usuario/Documents/GitHub/cs2100-trees-LuisUTEC/Node.h">
+			<Option target="cs2100_trees_LuisUTEC"/>
+		</Unit>
+		<Unit filename="C:/Users/Usuario/Documents/GitHub/cs2100-trees-LuisUTEC/Tree.h">
+			<Option target="cs2100_trees_LuisUTEC"/>
+		</Unit>
 		<Unit filename="C:/Users/Usuario/Documents/GitHub/cs2100-trees-LuisUTEC/main.cpp">
 			<Option target="cs2100_trees_LuisUTEC"/>
 		</Unit>

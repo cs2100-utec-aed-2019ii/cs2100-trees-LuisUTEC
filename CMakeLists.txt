@@ -3,4 +3,4 @@ project(cs2100_trees_LuisUTEC)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(cs2100_trees_LuisUTEC main.cpp)
+add_executable(cs2100_trees_LuisUTEC main.cpp Node.h Tree.h)
