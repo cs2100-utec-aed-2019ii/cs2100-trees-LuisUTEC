@@ -11,6 +11,35 @@ public:
     Node<T>* root;
 
     Tree():root(nullptr){}
+
+    void insert(Node<T> node){
+        Node<T>* p = root;
+        if(root == nullptr){
+            *root = node;
+        }
+        else{
+            while((p->right != nullptr)||(p->left != nullptr)){
+                while(node.key < p->key){
+                    p = p->left;
+                    if (node.key < p->key){
+                        p->left = node;
+                    }
+                    if (node.key > p->key){
+                        p->right = node;
+                    }
+                }
+                while(node.key > p->key){
+                    p = p->right;
+                    if (node.key < p->key){
+                        p->left = node;
+                    }
+                    if (node.key > p->key){
+                        p->right = node;
+                    }
+                }
+            }
+        }
+    }
 };
 
 
