@@ -12,34 +12,67 @@ public:
 
     Tree():root(nullptr){}
 
-    void insert(Node<T> node){
-        Node<T>* p = root;
-        if(root == nullptr){
-            *root = node;
-        }
-        else{
-            while((p->right != nullptr)||(p->left != nullptr)){
-                while(node.key < p->key){
-                    p = p->left;
-                    if (node.key < p->key){
-                        p->left = node;
-                    }
-                    if (node.key > p->key){
-                        p->right = node;
-                    }
-                }
-                while(node.key > p->key){
-                    p = p->right;
-                    if (node.key < p->key){
-                        p->left = node;
-                    }
-                    if (node.key > p->key){
-                        p->right = node;
-                    }
-                }
+    Node<T>* search(T value){
+        return search(root, value);
+    }
+    Node<T>* search(Node<T> node, T value){
+        if(value < node->key){
+            if(node->left != nullptr){
+                search(node->left, value);
+            }else{
+                return node->left;
+            }
+        }else if(value >= node->key){
+            if(node->right != nullptr){
+                search(node->right, value);
+            }else{
+                return node->right;
             }
         }
     }
+
+    void insertNode(T key){
+        if(root != nullptr){
+            insertNode(root,key);
+        }else{
+            root = new Node<T>(key);
+        }
+    }
+    void insertNode(Node<T>* node, T key){
+        if(key < node->key){
+            if(node->left != nullptr){
+                insertNode(node->left, key);
+            }else{
+                node->left = new Node<T>(key);
+            }
+        }else if(key >= node->key){
+            if(node->right != nullptr){
+                insertNode(node->right, key);
+            }else{
+                node->right = new Node<T>(key);
+            }
+        }
+
+    }
+
+
+    void deleteNode(T value){
+         delete search(value);
+    }
+    void deleteNode(Node<T>* p){
+        delete p;
+    }
+
+    void deleteTree(){
+        while (!isempty()){
+            deleteNode(root);
+        }
+    }
+
+    bool isempty(){
+        return root == nullptr;
+    }
+
 };
 
 
