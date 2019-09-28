@@ -11,10 +11,9 @@ int main() {
     tree.insertNode(12);
     tree.insertNode(4);
     tree.insertNode(5);
-    cout << tree.root->key << endl;
-    cout << tree.root->right->key << endl;
-    cout << tree.root->left->key << endl;
-    cout << tree.root->left->right->key << endl;
+    cout << tree.height() << endl;
+    tree.deleteNode(9);
+    tree.deleteNode(12);
 
 
     return 0;
