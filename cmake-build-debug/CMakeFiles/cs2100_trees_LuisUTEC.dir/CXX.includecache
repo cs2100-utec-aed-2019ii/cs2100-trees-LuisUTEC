@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Usuario/Documents/GitHub/cs2100-trees-LuisUTEC/Node.h
+
+C:/Users/Usuario/Documents/GitHub/cs2100-trees-LuisUTEC/Tree.h
+
+C:/Users/Usuario/Documents/GitHub/cs2100-trees-LuisUTEC/main.cpp
+iostream
+-
+Node.h
+C:/Users/Usuario/Documents/GitHub/cs2100-trees-LuisUTEC/Node.h
+Tree.h
+C:/Users/Usuario/Documents/GitHub/cs2100-trees-LuisUTEC/Tree.h
+
